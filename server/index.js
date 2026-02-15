@@ -9,6 +9,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors());
+app.use("/api", router); //localhost:5000/api/filter
 
 app.use(express.json());
 
@@ -35,4 +36,5 @@ const startServer = async () => {
     process.exit(1);
   }
 };
+
 startServer();
